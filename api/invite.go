@@ -93,8 +93,9 @@ func ErrorResponse(res http.ResponseWriter, er error) {
 	}
 	err = te.Execute(res, struct {
 		Error         string
+		Workspace     string
 		WorkspaceLogo string
-	}{er.Error(), *config.WORKSPACELOGO}) // merge.
+	}{er.Error(), *config.WORKSPACENAME, *config.WORKSPACELOGO}) // merge.
 	if err != nil {
 		log.Println("Error while executing the error template", err.Error())
 	}

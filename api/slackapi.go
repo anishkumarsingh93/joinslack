@@ -109,13 +109,13 @@ func checkError(err string) error {
 	 */
 	switch err {
 	case "invalid_auth":
-		return errors.New("The authentication token for the application has expired. PLease contact the admin")
+		return errors.New("The authentication token for the application has expired. Please contact Kasisnu.")
 	case "already_in_team":
-		return errors.New("You have already joined the team")
+		return errors.New("You are already in the team. Cheers!")
 	case "invalid_email":
-		return errors.New("The email provided by you is invalid. Please check the email")
+		return errors.New("The email provided by you is invalid. Please check the email you provided.")
 	case "already_invited":
-		return errors.New("You are already invited to the team. Please check your inbox")
+		return errors.New("You are already invited to the team. Please check your inbox.")
 	}
 	return nil
 }
